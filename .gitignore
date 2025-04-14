@@ -172,3 +172,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Configuration files containing sensitive data
+src/config.py
+.env
+.env.local
+.env.*
+
+# Python environment
+venv/
+env/
+*.pyc
+__pycache__/
