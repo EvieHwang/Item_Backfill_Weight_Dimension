@@ -71,19 +71,23 @@ def create_product_prompt(prompt_template, product_data):
         str: The complete prompt for Claude
     """
     # Extract components from the template
+    definitions = prompt_template["definitions"]
     instructions = prompt_template["instructions"]
-    descriptions = prompt_template["descriptions"]
+    analysis_methodology = prompt_template["analysis_methodology"]
     examples = prompt_template["examples"]
     input_format = prompt_template["input_format"]
     output_format = prompt_template["output_format"]
     
     # Create the prompt text
     prompt = f"""
+Definitions:
+{json.dumps(definitions, indent=2)}
+
 Instructions:
 {json.dumps(instructions, indent=2)}
 
-Descriptions:
-{json.dumps(descriptions, indent=2)}
+Analysis Methodology:
+{json.dumps(analysis_methodology, indent=2)}
 
 Input Format:
 {json.dumps(input_format, indent=2)}
