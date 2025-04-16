@@ -9,7 +9,7 @@
   
   "instructions": {
     "task": "Predict the missing weight for each product based on the provided information.",
-    "output_requirements": "Return only the predicted weight value in grams as a numeric value if confidence is 70% or higher. If confidence is below 70%, return 'unknown'."
+    "output_requirements": "Return ONLY the predicted weight value in grams as a numeric value if confidence is 70% or higher, or 'unknown' if confidence is below 70%. Do not include any explanation, reasoning, or confidence score in your response - just the number or the word 'unknown'."
   },
   
   "analysis_methodology": {
@@ -33,11 +33,7 @@
       },
       {
         "step": "Confidence Assessment",
-        "action": "Assign a confidence score (1-100%) based on information quality. Only predictions with confidence above 70% should be considered reliable (e.g., 85%)"
-      },
-      {
-        "step": "Reasoning Documentation",
-        "action": "Document your reasoning process, including which product attributes informed your estimate (e.g., materials, components, size, weight, etc.)"
+        "action": "Assign a confidence score (1-100%) based on information quality. Only predictions with confidence above 70% should be considered reliable (e.g., 85%). Do not output the confidence score in your response."
       },
       {
         "step": "Final Calculation",
@@ -60,8 +56,6 @@
         "category": "Clothing, Shoes & Jewelry | Costumes & Accessories | Kids & Baby | Girls | Costumes",
         "description": "Polyester | Made in US | Star Wars Ep VII Child's Stormtrooper Costume, Medium | Officially licensed Star Wars Episode VII: The Force Awakens Stormtrooper costume , Fabric Care Instructions - Hand Wash | Printed jumpsuit with attached boot covers and mask | Costumes are sized differently than clothing, review the Rubie's Child Size Chart to determine best choice for your child; this costume does run long in the legs | Value priced costume; accessories sold separately | Rubie's offers costumes and accessories from Star Wars original and prequel trilogies as well as the Clone Wars series; great group and family costume ideas"
       },
-      "reasoning": "Category & Material Analysis: Children's costume (Medium size) made of polyester, which is typically lightweight (150-250g/m²). Component Breakdown: Includes printed jumpsuit (main weight), attached boot covers (moderate weight), and mask (lightweight). Medium child size suggests age 8-10, with \"runs long in the legs\" indicating generous material use. Packaging & Comparable Products: Likely includes minimal packaging (50-70g). Similar children's character costumes typically weigh 350-500g. Confidence Limitations: No details on polyester thickness, mask material (rigid plastic vs. soft fabric), or internal packaging elements. The 420g estimate reflects a medium-weight children's polyester costume with multiple components, designed for comfort while maintaining the Star Wars Stormtrooper appearance.",
-      "confidence": 75,
       "output": 420
     },
     {
@@ -71,8 +65,6 @@
         "category": "Toys & Games | Baby & Toddler Toys",
         "description": "VEHICLE WITH LIGHTS AND SOUNDS: Chases cruiser features lights and sounds and caster wheels that make it possible to drive in any direction! Push the button to activate the lights and sounds! | HOVERCRAFT MODE: With working caster wheels, its easier than ever to roll your Charged Up Deluxe Vehicle to the rescue. Spin and drift 360 degrees in any direction and help save the day! | INCLUDES CHASE FIGURE: Wearing his blue Charged Up uniform, place the included Chase collectible figure behind the wheel of his deluxe cruiser. This pup hero is ready for anything that comes his way! | The PAW Patrol Charged Up Chase Deluxe Vehicle makes a great gift for kids aged 3 and up. Requires 3 LR44 batteries (included). Get charged up with PAW Patrol and their Deluxe Vehicles! | Includes: 1 Chase Figure, 1 Charged Up Deluxe Chase Vehicle"
       },
-      "reasoning": "Category & Component Analysis: Toy vehicle from \"Toys & Games | Baby & Toddler Toys\" category. Includes plastic vehicle body, electronic components for lights/sounds, 3 LR44 batteries, Chase figure, and caster wheels for 360° movement. Material & Construction: Primarily durable plastic (standard for toddler toys) with electronic circuit board, speaker, and batteries adding weight. Size & Function: \"Deluxe\" designation suggests larger size than basic line toys. Features moving parts and \"hovercraft mode.\" Designed for children 3+ years (requiring sturdy construction). Comparable Products: Similar electronic toy vehicles with figures typically weigh 350-500g, with lights, sounds, and batteries generally falling in this range. The 420g estimate reflects a medium-sized electronic toy vehicle with included figure and batteries. High confidence (82%) is based on detailed component description, though exact size specifications would improve certainty.",
-      "confidence": 82,
       "output": 420
     }
   ],

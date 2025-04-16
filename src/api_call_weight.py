@@ -178,7 +178,7 @@ def main():
     
     # Create absolute paths to the files
     input_csv = os.path.join(script_dir, "products.csv")
-    prompt_template_file = os.path.join(script_dir, "prompt_template.json")
+    prompt_template_file = os.path.join(script_dir, "prompt_weight.json")
     
     # You can set a specific product index to process (0-based)
     # Set to None to process all products
