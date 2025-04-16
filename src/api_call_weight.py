@@ -72,19 +72,24 @@ def create_product_prompt(prompt_template, product_data):
     """
     # Extract components from the template
     instructions = prompt_template["instructions"]
+    descriptions = prompt_template["descriptions"]
     examples = prompt_template["examples"]
+    input_format = prompt_template["input_format"]
+    output_format = prompt_template["output_format"]
     
     # Create the prompt text
     prompt = f"""
-{instructions['task']}
+Instructions:
+{json.dumps(instructions, indent=2)}
 
-{instructions['analysis_approach']}
+Descriptions:
+{json.dumps(descriptions, indent=2)}
 
-{instructions['confidence_score']}
+Input Format:
+{json.dumps(input_format, indent=2)}
 
-{instructions['reasoning']}
-
-{instructions['output_requirements']}
+Output Format:
+{json.dumps(output_format, indent=2)}
 
 Here are some examples:
 {json.dumps(examples, indent=2)}

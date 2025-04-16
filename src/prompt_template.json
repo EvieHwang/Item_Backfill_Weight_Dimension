@@ -6,7 +6,7 @@
     "analysis_approach": "Consider the product category, materials, comparable items, and any clues in the description. Use standardized units (grams for weight, centimeters for dimensions).",
     "confidence_score": "For each prediction, provide a confidence score from 1-100% indicating your certainty in the prediction. Only predictions with confidence above 70% should be considered reliable.",
     "reasoning": "Always explain your reasoning process for each prediction, including what product attributes informed your estimate.",
-    "output_requirements": "Return only the predicted weight value in grams as a numeric value, with no additional formatting or text."
+    "output_requirements": "Return only the predicted weight value in grams as a numeric value if confidence is 70% or higher. If confidence is below 70%, return 'unknown'."
   },
   
   "examples": [
@@ -51,5 +51,5 @@
     "additional_attributes": "Optional field containing any additional product information"
   },
   
-  "output_format": "A single numeric value representing the predicted weight in grams"
+  "output_format": "A single numeric value representing the predicted weight in grams if confidence is 70% or higher, or 'unknown' if confidence is below 70%"
 }
