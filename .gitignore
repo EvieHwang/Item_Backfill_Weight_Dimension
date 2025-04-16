@@ -175,6 +175,7 @@ cython_debug/
 
 # Configuration files containing sensitive data
 src/config.py
+config.json
 .env
 .env.local
 .env.*
